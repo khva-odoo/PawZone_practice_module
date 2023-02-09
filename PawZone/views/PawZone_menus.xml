@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <menuitem id="PawZone_menus_root" name="PawZone">
+        <menuitem id="pet_information_menu" name="Pets">
+            <menuitem id="Pet_information_menu_action" action="pet_information_action"/>
+         </menuitem>
+    </menuitem>
+</odoo>

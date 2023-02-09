@@ -11,6 +11,7 @@ class PetInformation(models.Model):
         selection = [('M', 'Male'),('F','Female')],
         help='Select gender'
     )
+    pet_breed = fields.Char()
     pet_status = fields.Selection(
         string = 'Status',
         selection = [('sold','Sold'), ('unsold','Unsold')]

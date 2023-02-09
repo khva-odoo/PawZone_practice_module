@@ -1,0 +1,20 @@
+<odoo>
+
+    <record id="pet_information_form" model="ir.ui.view">
+        <field name="name">pet.information.views.form</field>
+        <field name="model">pet.information</field>
+        <field name="arch" type="xml">
+            <form string="Information">
+            <sheet>
+            <sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="pet_information_action" model="ir.actions.act_window">
+        <field name="name">Pet Information</field>
+        <field name="res_model">pet.information</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
