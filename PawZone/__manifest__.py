@@ -12,8 +12,14 @@
 
     'data':[
         'security/ir.model.access.csv',
+        'views/pet_category_views.xml',
         'views/pet_information_views.xml',
+        'views/customer_details.xml',
         'views/PawZone_menus.xml',
+        'views/pet_breeds_views.xml',
+        
+        
+        
     ],
 
     'application': True,

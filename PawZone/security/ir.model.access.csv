@@ -1,2 +1,5 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_pet_information,access_pet_information,model_pet_information,base.group_user,1,1,1,1
+access_pet_category,access_pet_category,model_pet_category,base.group_user,1,1,1,1
+access_pet_breeds,access_pet_breeds,model_pet_breeds,base.group_user,1,1,1,1
+access_customer_details,access_customer_details,model_customer_details,base.group_user,1,1,1,1

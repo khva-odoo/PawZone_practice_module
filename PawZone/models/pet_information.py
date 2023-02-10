@@ -4,16 +4,20 @@ class PetInformation(models.Model):
     _name = "pet.information"
     _description = "All information regarding pet"
 
-    pet_id = fields.Integer(string = 'Pet Id',required=True)
-    pet_description = fields.Text(required=True)
+    pet_id = fields.Char(string = 'Pet Id',required=True,)
+    pet_description = fields.Text()
     pet_gender = fields.Selection(
         string = 'Gender',
         selection = [('M', 'Male'),('F','Female')],
         help='Select gender'
     )
-    pet_breed = fields.Char()
+    pet_type = fields.Char()
+    pet_breed = fields.Char(required=True)
     pet_status = fields.Selection(
         string = 'Status',
         selection = [('sold','Sold'), ('unsold','Unsold')]
     )
-    price = fields.Float(required=True)
+    pet_birth_date = fields.Date(string="Date of Birth")
+    
+    pet_category_id = fields.Many2one("pet.category", string = "Pet Category")
+    

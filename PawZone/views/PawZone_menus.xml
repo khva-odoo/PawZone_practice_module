@@ -4,6 +4,12 @@
     <menuitem id="PawZone_menus_root" name="PawZone">
         <menuitem id="pet_information_menu" name="Pets">
             <menuitem id="Pet_information_menu_action" action="pet_information_action"/>
-         </menuitem>
+            <menuitem id="pet_category_menu_action" action="pet_category_action"/>
+            <menuitem id="pet_breeds_menu_action" action="pet_breeds_action"/>
+        </menuitem>
+         
+        <menuitem id="customer_details_menu" name="Customer">
+            <menuitem id="customer_details_menu_action" action="customer_details_action"/>
+        </menuitem>
     </menuitem>
 </odoo>

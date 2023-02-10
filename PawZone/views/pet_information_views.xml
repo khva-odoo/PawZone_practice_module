@@ -5,11 +5,52 @@
         <field name="model">pet.information</field>
         <field name="arch" type="xml">
             <form string="Information">
-            <sheet>
-            <sheet>
+                <sheet>
+                        <header>
+                            <field name ="pet_status" widget = "statusbar" options="{'clickable':'1'}"/>
+                        </header>
+                        <label for = "pet_id"/>
+                        <h1>
+                            <field name="pet_id" placeholder="Pet_id"/>                        
+                        </h1>
+                    
+                    <group >
+                        <group col="2">
+                            <field name="pet_category_id"/>
+                            <field name="pet_breed"/>
+                            <field name="pet_birth_date"/>
+                            <field name="pet_gender" widget = "radio"/>
+                                        
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <field name="pet_description"/>
+                                </group>
+                            </page>
+                        </notebook>   
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
+
+
+
+    <record id="pet_information_view_tree" model="ir.ui.view">
+        <field name="name">pet.information.view.tree</field>
+        <field name="model">pet.information</field>
+        <field name="arch" type="xml">
+            <tree string="Information">
+                <field name="pet_id"/>
+                <field name="pet_category_id"/>
+                <field name="pet_breed"/>
+                <field name="pet_gender"/>
+            </tree>
+        </field>
+    </record>
+
+
 
 
     <record id="pet_information_action" model="ir.actions.act_window">
