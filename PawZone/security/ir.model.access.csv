@@ -3,3 +3,5 @@ access_pet_information,access_pet_information,model_pet_information,base.group_u
 access_pet_category,access_pet_category,model_pet_category,base.group_user,1,1,1,1
 access_pet_breeds,access_pet_breeds,model_pet_breeds,base.group_user,1,1,1,1
 access_customer_details,access_customer_details,model_customer_details,base.group_user,1,1,1,1
+access_product_details,access_product_details,model_product_details,base.group_user,1,1,1,1
+access_product_categories,access_product_categories,model_product_categories,base.group_user,1,1,1,1

@@ -5,13 +5,14 @@ class CustomerDetails(models.Model):
     _description="Customer Details"
 
 
-    name=fields.Char()
+    name=fields.Char(required=True)
     email_id=fields.Char()
-    phone_number=fields.Integer()
+    phone_number=fields.Char()
     address=fields.Text()
     city=fields.Char()
     state=fields.Char()
     country=fields.Char()
-    pincode=fields.Integer()
+    pincode=fields.Char()
+
 
 

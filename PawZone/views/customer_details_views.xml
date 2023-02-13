@@ -7,20 +7,30 @@
             <field name="arch" type="xml">
                 <form string="Customer Details">
                     <sheet>
-            
+                        <label for="name"/>
                             <h1>
-                                <field name="name" placeholder="Customer Name"/>
+                                <field name="name" placeholder="Tom Peterson"/>
                     
                             </h1>
-                            <group>
-                                <field name="email_id"/>
-                                <field name="phone_number"/>
-                                <field name="address"/>
-                                <field name="city"/>
-                                <field name="state"/>                                
-                                <field name="country"/>
-                                <field name="pincode"/>
-                            </group>
+                                                            
+                                <group string="Address details">
+                                    <group colspan="2">
+                                    <field name="address" string="Address"/>
+                                    </group>
+                                    <group>
+                                        <field name="city"/>
+                                        <field name="state"/> 
+                                    </group>
+                                    <group>                                                                  
+                                        <field name="country"/>
+                                        <field name="pincode"/>
+                                    </group>
+                                </group>
+                                <group string="Personal Details">
+                                    <field name="email_id"/>
+                                    <field name="phone_number"/>
+                                </group>
+                            
                     </sheet>
                 </form>
         </field>

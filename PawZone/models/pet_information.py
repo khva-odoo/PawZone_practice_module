@@ -18,6 +18,7 @@ class PetInformation(models.Model):
         selection = [('sold','Sold'), ('unsold','Unsold')]
     )
     pet_birth_date = fields.Date(string="Date of Birth")
+    image=fields.Binary("Image",help="Select image here",)
     
     pet_category_id = fields.Many2one("pet.category", string = "Pet Category")
     

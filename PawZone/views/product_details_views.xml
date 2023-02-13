@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<record id="product_details_form" model="ir.ui.view">
+        <field name="name">product.details.views.form</field>
+        <field name="model">product.details</field>
+        <field name="arch" type="xml">
+            <form string="Product Details">
+                <sheet>
+                    <label for ="name"/>
+                        <h1>
+                            <field name = "name" placeholder="Chewy Ball"/>
+                            <field name = "image" widget="image"/>
+                        </h1>
+                
+                        <notebook>
+                        <page string="General Information">
+                            <group col="1"> 
+                                <group> 
+                                    <field name="sales_price"/>
+                                    <field name="barcode"/>
+                                </group>
+                                <group string="Description">
+                                    <field name="description" nolabel="1"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Additional Information">
+                            <field name="additional_information"/>
+                        </page>
+                    </notebook>                   
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+ <record id="product_details_view_tree" model="ir.ui.view">
+        <field name="name">product.details.view.tree</field>
+        <field name="model">product.details</field>
+        <field name="arch" type="xml">
+            <tree string="Product Details">  
+                <field name="name"/>
+                <field name="sales_price"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+
+    <record id="product_details_action" model="ir.actions.act_window">
+        <field name="name">Product Details</field>
+        <field name="res_model">product.details</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

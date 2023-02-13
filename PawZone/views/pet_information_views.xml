@@ -6,30 +6,33 @@
         <field name="arch" type="xml">
             <form string="Information">
                 <sheet>
-                        <header>
-                            <field name ="pet_status" widget = "statusbar" options="{'clickable':'1'}"/>
-                        </header>
-                        <label for = "pet_id"/>
-                        <h1>
-                            <field name="pet_id" placeholder="Pet_id"/>                        
-                        </h1>
+                    <header>
+                        <field name ="pet_status" widget = "statusbar" options="{'clickable':'1'}"/>
+                    </header>
+                    <field name = "image" widget = "image" />
+                    <group>
+                    <label for = "pet_id"/>
+                    <h1>
+                        <field name="pet_id" placeholder="80995677"/>                        
+                    </h1>
+                     </group>   
                     
-                    <group >
-                        <group col="2">
-                            <field name="pet_category_id"/>
-                            <field name="pet_breed"/>
-                            <field name="pet_birth_date"/>
-                            <field name="pet_gender" widget = "radio"/>
-                                        
-                        </group>
-                        <notebook>
-                            <page string="Description">
-                                <group>
-                                    <field name="pet_description"/>
-                                </group>
-                            </page>
-                        </notebook>   
-                    </group>
+                    <notebook>
+                        <page string="Details">
+                            <group >
+                                <field name="pet_category_id"/>
+                                <field name="pet_breed"/>
+                                <field name="pet_birth_date"/>
+                                <field name="pet_gender" widget = "radio"/>                                                
+                            </group>
+                        </page>
+                        <page string="Description">
+                            <group>
+                                <field name="pet_description"/>
+                            </group>
+                        </page>
+                    </notebook>   
+                    
                 </sheet>
             </form>
         </field>
