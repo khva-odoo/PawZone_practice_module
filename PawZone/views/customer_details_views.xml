@@ -8,29 +8,28 @@
                 <form string="Customer Details">
                     <sheet>
                         <label for="name"/>
-                            <h1>
-                                <field name="name" placeholder="Tom Peterson"/>
-                    
-                            </h1>
-                                                            
-                                <group string="Address details">
-                                    <group colspan="2">
-                                    <field name="address" string="Address"/>
-                                    </group>
-                                    <group>
-                                        <field name="city"/>
-                                        <field name="state"/> 
-                                    </group>
-                                    <group>                                                                  
-                                        <field name="country"/>
-                                        <field name="pincode"/>
-                                    </group>
-                                </group>
-                                <group string="Personal Details">
-                                    <field name="email_id"/>
-                                    <field name="phone_number"/>
-                                </group>
-                            
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <h1>
+                            <field name="name" placeholder="Tom Peterson"/>                                                   
+                        </h1>
+                                                    
+                        <group string="Address details">
+                            <group colspan="2">
+                            <field name="address" string="Address"/>
+                            </group>
+                            <group>
+                                <field name="city"/>
+                                <field name="state"/> 
+                            </group>
+                            <group>                                                                  
+                                <field name="country"/>
+                                <field name="pincode"/>
+                            </group>
+                        </group>
+                        <group string="Personal Details">
+                            <field name="email_id"/>
+                            <field name="phone_number"/>
+                        </group>                            
                     </sheet>
                 </form>
         </field>

@@ -8,18 +8,21 @@
         <field name="arch" type="xml">
             <form string="Product Details">
                 <sheet>
-                    <label for ="name"/>
+                    
                         <h1>
-                            <field name = "name" placeholder="Chewy Ball"/>
-                            <field name = "image" widget="image"/>
+                            <field name = "name" placeholder="Chewy Ball"/>                        
                         </h1>
-                
+                        <field name="image" widget="image"/>
+
                         <notebook>
                         <page string="General Information">
                             <group col="1"> 
                                 <group> 
+                                    <field name="product_categories_id"/>
+                                    <field name="barcode" string="Code"/>
                                     <field name="sales_price"/>
-                                    <field name="barcode"/>
+                                    <field name="vendor_price"/>
+                                    <field name="quantity_on_hand"/>                               
                                 </group>
                                 <group string="Description">
                                     <field name="description" nolabel="1"/>
@@ -42,7 +45,9 @@
         <field name="arch" type="xml">
             <tree string="Product Details">  
                 <field name="name"/>
+                <field name="product_categories_id"/>
                 <field name="sales_price"/>
+                <field name="quantity_on_hand"/>
             </tree>
         </field>
     </record>

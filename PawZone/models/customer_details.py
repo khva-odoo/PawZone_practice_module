@@ -13,6 +13,6 @@ class CustomerDetails(models.Model):
     state=fields.Char()
     country=fields.Char()
     pincode=fields.Char()
-
+    image=fields.Binary()
 
 

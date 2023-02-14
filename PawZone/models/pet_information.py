@@ -3,6 +3,7 @@ from odoo import models,fields
 class PetInformation(models.Model):
     _name = "pet.information"
     _description = "All information regarding pet"
+    _rec_name="pet_id"
 
     pet_id = fields.Char(string = 'Pet Id',required=True,)
     pet_description = fields.Text()
@@ -12,7 +13,7 @@ class PetInformation(models.Model):
         help='Select gender'
     )
     pet_type = fields.Char()
-    pet_breed = fields.Char(required=True)
+    
     pet_status = fields.Selection(
         string = 'Status',
         selection = [('sold','Sold'), ('unsold','Unsold')]
@@ -21,4 +22,5 @@ class PetInformation(models.Model):
     image=fields.Binary("Image",help="Select image here",)
     
     pet_category_id = fields.Many2one("pet.category", string = "Pet Category")
+    pet_breeds_id=fields.Many2one("pet.breeds",string="Breed")
     

@@ -5,10 +5,10 @@
         <field name="model">pet.information</field>
         <field name="arch" type="xml">
             <form string="Information">
-                <sheet>
-                    <header>
+                <header>
                         <field name ="pet_status" widget = "statusbar" options="{'clickable':'1'}"/>
-                    </header>
+                </header>
+                <sheet>                    
                     <field name = "image" widget = "image" />
                     <group>
                     <label for = "pet_id"/>
@@ -21,7 +21,7 @@
                         <page string="Details">
                             <group >
                                 <field name="pet_category_id"/>
-                                <field name="pet_breed"/>
+                                <field name="pet_breeds_id"/>
                                 <field name="pet_birth_date"/>
                                 <field name="pet_gender" widget = "radio"/>                                                
                             </group>
@@ -47,7 +47,7 @@
             <tree string="Information">
                 <field name="pet_id"/>
                 <field name="pet_category_id"/>
-                <field name="pet_breed"/>
+                <field name="pet_breeds_id"/>
                 <field name="pet_gender"/>
             </tree>
         </field>
