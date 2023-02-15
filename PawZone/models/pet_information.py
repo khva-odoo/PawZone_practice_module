@@ -16,8 +16,9 @@ class PetInformation(models.Model):
     
     pet_status = fields.Selection(
         string = 'Status',
-        selection = [('sold','Sold'), ('unsold','Unsold')]
+        selection = [('available','Available'), ('not_available','Not Available')]
     )
+    active=fields.Boolean('Active',default=True)
     pet_birth_date = fields.Date(string="Date of Birth")
     image=fields.Binary("Image",help="Select image here",)
     

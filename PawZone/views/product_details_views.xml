@@ -7,8 +7,10 @@
         <field name="model">product.details</field>
         <field name="arch" type="xml">
             <form string="Product Details">
-                <sheet>
-                    
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable':'1'}"/> 
+                </header>
+                <sheet>                    
                         <h1>
                             <field name = "name" placeholder="Chewy Ball"/>                        
                         </h1>

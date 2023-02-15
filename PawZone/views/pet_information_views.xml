@@ -49,11 +49,32 @@
                 <field name="pet_category_id"/>
                 <field name="pet_breeds_id"/>
                 <field name="pet_gender"/>
+                <field name="pet_status"/>
             </tree>
         </field>
     </record>
 
 
+
+    <record id="pet_information__view_search" model="ir.ui.view">
+        <field name="name">pet.information.view.search</field>
+        <field name="model">pet.information</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="pet_category_id"/>
+                <field name="pet_breeds_id"/>
+                <field name="pet_gender"/>
+                   <filter string="Available" name="pet_status" domain="[('pet_status','=', 'available')]"/> 
+                   <filter string="Not Available" name="pet_status" domain="[('pet_status','=', 'not_available')]"/> 
+                <group expand="1" string="Group By">
+                    <filter string="Breed" name="pet_breeds_id" context="{'group_by':'pet_breeds_id'}"/>
+                     <filter string="Category" name="pet_category_id" context="{'group_by':'pet_category_id'}"/>
+                     <filter string="Gender" name="pet_gender" context="{'group_by':'pet_gender'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
 
 
     <record id="pet_information_action" model="ir.actions.act_window">
