@@ -14,5 +14,5 @@ class CustomerDetails(models.Model):
     country=fields.Char()
     pincode=fields.Char()
     image=fields.Binary()
-
+    active=fields.Boolean('Active',default=True)
 

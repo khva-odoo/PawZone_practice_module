@@ -37,7 +37,7 @@
 
 
 
- <record id="customer_details_view_tree" model="ir.ui.view">
+    <record id="customer_details_view_tree" model="ir.ui.view">
         <field name="name">customer.details.view.tree</field>
         <field name="model">customer.details</field>
         <field name="arch" type="xml">
@@ -51,6 +51,18 @@
         </field>
     </record>
 
+    <record id="customer_details_view_search" model="ir.ui.view">
+        <field name="name">customer.details.view.search</field>
+        <field name="model">customer.details</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                 <field name="city"/>
+                <field name="state"/>
+                <field name="country"/>  
+            </search>
+        </field>
+    </record>
 
 
 

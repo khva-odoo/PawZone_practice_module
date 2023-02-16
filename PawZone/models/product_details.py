@@ -17,3 +17,5 @@ class ProductDetails(models.Model):
         selection=[('available','Available'),('out_of_stock','Out-of-Stock')]
     )
     product_categories_id=fields.Many2one("product.categories", string="Product Category")
+    #product_sub_categories_id=fields.Many2one("product.categories",string="Product sub-categories", name="sub_categories")
+    active=fields.Boolean('Active',default=True)

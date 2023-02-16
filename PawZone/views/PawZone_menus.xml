@@ -16,5 +16,9 @@
             <menuitem id="product_details_menu_action" action="product_details_action"/>
             <menuitem id="product_categories_menu_action" action="product_categories_action"/>
         </menuitem>
+
+        <menuitem id="pet_services_menu" name="Services">
+            <menuitem id="pet_services_menu_action" action="pet_services_action"/>
+        </menuitem>
     </menuitem>
 </odoo>

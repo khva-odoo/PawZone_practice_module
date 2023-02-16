@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="pet_services_views_form" model="ir.ui.view">
+        <field name="name">pet.services.views.form</field>
+        <field name="model">pet.services</field>
+        <field name="arch" type="xml">
+            <form string="Pet Services">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="fees"/>
+                    </group>            
+                    <notebook>
+                        <page string="Details">                                
+                            <field name = "service_detail" placeholder="Service Detail"/>                                
+                        </page>
+                    </notebook>                    
+                </sheet>             
+            </form>
+        </field>
+    </record>
+
+    <record id="pet_services_view_tree" model="ir.ui.view">
+        <field name="name">pet.services.views.tree</field>
+        <field name="model">pet.services</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="fees"/>
+            </tree>
+        </field>    
+    </record>
+
+ <record id="pet_services_views_search" model="ir.ui.view">
+    <field name="name">pet_services.views.search</field>
+    <field name="model">pet.services</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="name"/>
+            <filter string="Archived" name="inactive" domain="[('active','=','False')]"/>
+        </search>
+    </field>
+</record>
+
+
+    <record id="pet_services_action" model="ir.actions.act_window">
+        <field name="name">Pet Services</field>
+        <field name="res_model">pet.services</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
