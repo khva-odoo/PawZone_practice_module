@@ -12,3 +12,4 @@ class PetServices(models.Model):
     fees=fields.Char()
     service_detail=fields.Text(string="Service Detail")
     active=fields.Boolean('Active',default=True)
+    vendor_ids=fields.Many2many("vendor.details",string="Vendor")

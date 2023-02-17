@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="vendor_details_views_form" model="ir.ui.view">
+        <field name="name">vendor.details.views.form</field>
+        <field name="model">vendor.details</field>
+        <field name="arch" type="xml">
+            <form>
+            
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>        
+                    <h1>
+                        <field name="name" placeholder="Tim Belloy"/>                       
+                    </h1> 
+                    <group>                 
+                       <field name="company_name" placeholder="Company Name" nolabel="1" colspan="2"/>                     
+                    </group>
+                    <group>
+                        <group>
+                            <field name="address"/>                        
+                            <field name="city" />
+                            <field name="state"/>                        
+                            <field name="country"/>
+                        </group>
+                        <group>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="website"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Other Contact">
+                            <group>
+                                <field name="name"/>
+                                <field name="phone"/>
+                            </group>
+                        </page>
+                        <page string="Breeds">
+                            <field name="breeds_ids"/>                           
+                        </page>
+                        <page string="Pets">                                                     
+                                <field name="pet_ids"/>                            
+                        </page>
+                        <page string="Products">
+                            <field name="product_ids"/> 
+                        </page>
+                        <page string="Services">
+                            <field name="service_ids"/> 
+                        </page>
+                        <page string="Internal Notes">
+                             <field name = "notes" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id ="vendor_details_views_tree" model="ir.ui.view">
+        <field name="name">vendor.details.views.tree</field>
+        <field name="model">vendor.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="company_name"/>
+                <field name="city"/>
+                <field name="state"/>
+                <field name="country"/>
+                <field name="website"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record id="pet_information_view_tree" model="ir.ui.view">
+        <field name="name">pet.information.view.tree</field>
+        <field name="model">pet.information</field>
+        <field name="arch" type="xml">
+            <tree string="Information" editable="bottom">
+                <field name="pet_id"/>
+                <field name="pet_category_id"/>
+                <field name="pet_breeds_id"/>
+                <field name="pet_gender"/>
+                <field name="pet_status"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="vendor_details_action" model="ir.actions.act_window">
+        <field name="name">Vendor Details</field>
+        <field name="res_model">vendor.details</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>    

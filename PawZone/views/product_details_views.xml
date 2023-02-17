@@ -31,6 +31,9 @@
                                 </group>
                             </group>
                         </page>
+                        <page string="Vendors">
+                            <field name="vendor_ids"/>
+                        </page>
                         <page string="Additional Information">
                             <field name="additional_information"/>
                         </page>

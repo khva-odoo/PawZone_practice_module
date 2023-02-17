@@ -18,6 +18,7 @@
         'views/product_details_views.xml',
         'views/product_categories_views.xml',
         'views/pet_services_views.xml',
+        'views/vendor_details_views.xml',
         'views/PawZone_menus.xml',
         'views/pet_breeds_views.xml',
         

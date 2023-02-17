@@ -31,8 +31,12 @@
                                 <field name="pet_description"/>
                             </group>
                         </page>
-                    </notebook>   
-                    
+                        <page string="Other details">
+                            <group>
+                                <field name="vendor_id"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

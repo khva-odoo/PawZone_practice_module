@@ -20,5 +20,9 @@
         <menuitem id="pet_services_menu" name="Services">
             <menuitem id="pet_services_menu_action" action="pet_services_action"/>
         </menuitem>
+
+        <menuitem id="vendor_details_menu" name="Vendor">
+            <menuitem id="vendor_details_menu_action" action="vendor_details_action"/>
+        </menuitem>
     </menuitem>
 </odoo>

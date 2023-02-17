@@ -24,4 +24,4 @@ class PetInformation(models.Model):
     
     pet_category_id = fields.Many2one("pet.category", string = "Pet Category")
     pet_breeds_id=fields.Many2one("pet.breeds",string="Breed")
-    
+    vendor_id=fields.Many2one("vendor.details",string="Vendor")

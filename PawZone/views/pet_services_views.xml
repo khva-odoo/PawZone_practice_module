@@ -17,6 +17,9 @@
                         <page string="Details">                                
                             <field name = "service_detail" placeholder="Service Detail"/>                                
                         </page>
+                        <page string="Vendors">
+                            <field name="vendor_ids"/>
+                        </page>
                     </notebook>                    
                 </sheet>             
             </form>

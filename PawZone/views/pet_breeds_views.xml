@@ -10,8 +10,14 @@
             <sheet>
                 <group>
                     <field name="name"/>
+                    
                     <field name="description"/>
                 </group>
+                <notebook>
+                    <page string="Vendors">
+                        <field name="vendor_ids"/>
+                    </page>
+                </notebook>
             </sheet>
         </form>
     </field>
