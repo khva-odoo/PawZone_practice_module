@@ -9,3 +9,4 @@ class PetBreeds(models.Model):
     active=fields.Boolean('Active',default=True)
 
     vendor_ids=fields.Many2many("vendor.details",string="Vendors")
+    

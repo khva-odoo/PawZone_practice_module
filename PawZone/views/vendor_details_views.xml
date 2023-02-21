@@ -78,7 +78,7 @@
         <field name="name">pet.information.view.tree</field>
         <field name="model">pet.information</field>
         <field name="arch" type="xml">
-            <tree string="Information" editable="bottom">
+            <tree string="Information" >
                 <field name="pet_id"/>
                 <field name="pet_category_id"/>
                 <field name="pet_breeds_id"/>

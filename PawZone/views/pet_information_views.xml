@@ -20,10 +20,16 @@
                     <notebook>
                         <page string="Details">
                             <group >
-                                <field name="pet_category_id"/>
-                                <field name="pet_breeds_id"/>
-                                <field name="pet_birth_date"/>
-                                <field name="pet_gender" widget = "radio"/>                                                
+                                <group>
+                                    <field name="pet_category_id"/>
+                                    <field name="pet_breeds_id"/>
+                                    <field name="pet_birth_date"/>
+                                    <field name="pet_gender" widget = "radio"/>                                                
+                                </group>
+                                <group>
+                                    <field name="vendor_price"/>
+                                    <field name="sales_price"/>
+                                </group>
                             </group>
                         </page>
                         <page string="Description">
@@ -48,7 +54,7 @@
         <field name="name">pet.information.view.tree</field>
         <field name="model">pet.information</field>
         <field name="arch" type="xml">
-            <tree string="Information">
+            <tree string="Information list">
                 <field name="pet_id"/>
                 <field name="pet_category_id"/>
                 <field name="pet_breeds_id"/>
