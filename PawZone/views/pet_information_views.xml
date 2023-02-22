@@ -24,6 +24,7 @@
                                     <field name="pet_category_id"/>
                                     <field name="pet_breeds_id"/>
                                     <field name="pet_birth_date"/>
+                                    <field name="pet_age"/>
                                     <field name="pet_gender" widget = "radio"/>                                                
                                 </group>
                                 <group>

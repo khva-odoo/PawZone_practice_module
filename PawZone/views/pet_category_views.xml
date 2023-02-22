@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
+
+    <record id="pet_category_views_form" model="ir.ui.view">
+        <field name="name">pet.category.views.form</field>
+        <field name="model">pet.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+     <record id="pet_categories_views_tree" model="ir.ui.view">
+        <field name = "name">pet.categories.views.tree</field>
+        <field name="model">pet.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name ="name"/>                
+            </tree>
+        </field>
+    </record>
+
     <record id="pet_category_views_search" model="ir.ui.view">
         <field name="name">pet_category.views.search</field>
         <field name="model">pet.category</field>

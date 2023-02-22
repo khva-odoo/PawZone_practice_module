@@ -1,4 +1,6 @@
-from odoo import models,fields
+from odoo import models,fields,api
+from datetime import datetime
+from dateutil.relativedelta import relativedelta 
 
 class PetInformation(models.Model):
     _name = "pet.information"
@@ -23,7 +25,17 @@ class PetInformation(models.Model):
     image=fields.Binary("Image",help="Select image here",)
     
     pet_category_id = fields.Many2one("pet.category", string = "Pet Category")
-    pet_breeds_id=fields.Many2one("pet.breeds",string="Breed")
+    pet_breeds_id=fields.Many2one("pet.breeds",string="Breed",domain="[('category_id','=?',pet_category_id)]")
     vendor_id=fields.Many2one("vendor.details",string="Vendor")
     vendor_price=fields.Float()
     sales_price=fields.Float()
+    pet_age=fields.Integer(string="Age")
+   
+    """ @api.depends ('pet_birth_date')
+    def _compute_age(self):
+        for record in self:
+            if self.pet_birth_date:
+                d1=self.pet_birth_date
+                d2=datetime.date.today()
+                self.pet_age=relativedelta(d2,d1).years
+ """
