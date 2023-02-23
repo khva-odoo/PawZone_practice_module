@@ -6,9 +6,13 @@
         <field name="arch" type="xml">
             <form string="Information">
                 <header>
-                        <field name ="pet_status" widget = "statusbar" options="{'clickable':'1'}"/>
+                        <field name ="pet_status" widget = "statusbar" options="{'clickable':'1'}" statusbar_visible="available,sold" attrs="{'invisible':['|',('pet_status','=','sold'),('pet_status','=','canceled')]}"/>
+                        <button name="action_sold" type="object" string="Sold" class="oe_highlight" attrs="{'invisible':[('pet_status','!=','available')]}"/>
+                        <button name="action_cancel" type="object" string="Cancel" class="oe_highlight" attrs="{'invisible':[('pet_status','!=','available')]}"/>
                 </header>
-                <sheet>                    
+                <sheet>           
+                    <widget name= "web_ribbon"  title="Sold" bg_color="bg-danger" attrs="{'invisible':[('pet_status','!=','sold')]}"/>
+                    <widget name= "web_ribbon"  title="Canceled" bg_color="bg-warning" attrs="{'invisible':[('pet_status','!=','canceled')]}"/>       
                     <field name = "image" widget = "image" />
                     <group>
                     <label for = "pet_id"/>
