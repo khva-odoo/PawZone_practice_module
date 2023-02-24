@@ -74,11 +74,12 @@
 
 
 
-    <record id="pet_information_view_tree" model="ir.ui.view">
+    <!-- <record id="pet_information_views_tree" model="ir.ui.view">
         <field name="name">pet.information.view.tree</field>
         <field name="model">pet.information</field>
         <field name="arch" type="xml">
             <tree string="Information" >
+                <field name="sequence" widget="handle" />
                 <field name="pet_id"/>
                 <field name="pet_category_id"/> 
                 <field name="pet_breeds_id"/>
@@ -86,7 +87,7 @@
                 <field name="pet_status"/>
             </tree>
         </field>
-    </record>
+    </record> -->
     
     <record id="vendor_details_action" model="ir.actions.act_window">
         <field name="name">Vendor Details</field>

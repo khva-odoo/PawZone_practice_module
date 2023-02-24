@@ -11,6 +11,11 @@
                     <group>
                         <field name="name"/>
                     </group>
+                    <notebook>
+                        <page string="Breeds">                            
+                                <field name="breeds_ids"/>                            
+                        </page>                            
+                    </notebook>                    
                 </sheet>
             </form>
         </field>

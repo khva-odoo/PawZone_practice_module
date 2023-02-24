@@ -3,6 +3,7 @@ from odoo import models,fields
 class PetBreeds(models.Model):
     _name = "pet.breeds"
     _description = "Pet Breeds"
+    _order="name"
 
     name = fields.Char(required=True,string="Breed",help = "Choose which breed the pet belongs to?")  
     description=fields.Text() 

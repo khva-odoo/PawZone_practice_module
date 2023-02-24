@@ -34,6 +34,7 @@
                                 <group>
                                     <field name="vendor_price"/>
                                     <field name="sales_price"/>
+                                
                                 </group>
                             </group>
                         </page>
@@ -59,12 +60,17 @@
         <field name="name">pet.information.view.tree</field>
         <field name="model">pet.information</field>
         <field name="arch" type="xml">
-            <tree string="Information list">
+            <tree string="Information list" 
+                  decoration-success="pet_status=='available'" 
+                  decoration-danger="pet_status=='sold'"
+                  decoration-muted="pet_status=='canceled'">
+                <field name="sequence" widget="handle" />
                 <field name="pet_id"/>
                 <field name="pet_category_id"/>
                 <field name="pet_breeds_id"/>
                 <field name="pet_gender"/>
-                <field name="pet_status"/>
+                <field name="pet_status" />
+                <field name="sales_price"/>
             </tree>
         </field>
     </record>
@@ -80,12 +86,13 @@
                 <field name="pet_breeds_id"/>
                 <field name="pet_gender"/>
                 <filter string="Available" name="pet_status" domain="[('pet_status','=', 'available')]"/> 
-                <filter string="Not Available" name="pet_status" domain="[('pet_status','=', 'not_available')]"/> 
+                <filter string="Sold" name="pet_status" domain="[('pet_status','=', 'sold')]"/> 
                 <filter string="Archived" name="inactive" domain="[('active','=','False')]"/>
                 <group expand="1" string="Group By">
                     <filter string="Breed" name="pet_breeds_id" context="{'group_by':'pet_breeds_id'}"/>
                     <filter string="Category" name="pet_category_id" context="{'group_by':'pet_category_id'}"/>
                     <filter string="Gender" name="pet_gender" context="{'group_by':'pet_gender'}"/>
+                    <filter string="Status" name="pet_status" context="{'group by':'pet_status'}"/>
                 </group>
             </search>
         </field>

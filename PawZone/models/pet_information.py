@@ -8,7 +8,9 @@ class PetInformation(models.Model):
     _description = "All information regarding pet"
     _rec_name="pet_id"
 
+    
     pet_id = fields.Char(string = 'Pet Id',required=True,)
+    sequence = fields.Integer(default=1)
     pet_description = fields.Text()
     pet_gender = fields.Selection(
         string = 'Gender',
@@ -72,3 +74,6 @@ class PetInformation(models.Model):
             else:
                 record.pet_status="canceled"
             return True
+        
+        
+    
