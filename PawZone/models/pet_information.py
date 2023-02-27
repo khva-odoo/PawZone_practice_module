@@ -76,4 +76,10 @@ class PetInformation(models.Model):
             return True
         
         
-    
+    def name_get(self):
+        res=[]
+        for record in self:
+            name= record.pet_breeds_id
+            name="%s-%s-%s" % (record.pet_id,record.pet_category_id.name,record.pet_breeds_id.name)
+            res=[(record.id,name)]
+        return res
