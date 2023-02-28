@@ -10,3 +10,7 @@ class PetBreeds(models.Model):
     active=fields.Boolean('Active',default=True)
     category_id=fields.Many2one("pet.category",string="Category")
     vendor_ids=fields.Many2many("vendor.details",string="Vendors")
+    pet_ids=fields.One2many("pet_information","pet_breeds_id")
+    pet_count=fields.Integer(compute="__compute_pet_count")
+
+

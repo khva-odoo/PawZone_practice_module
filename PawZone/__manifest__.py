@@ -15,7 +15,7 @@
         'views/pet_category_views.xml',
         
         'views/pet_information_views.xml',
-        'views/customer_details_views.xml',
+        'views/res_users_views.xml',
         'views/product_details_views.xml',
         'views/product_categories_views.xml',
         'views/pet_services_views.xml',
