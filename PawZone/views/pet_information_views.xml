@@ -103,5 +103,6 @@
         <field name="name">Pet Information</field>
         <field name="res_model">pet.information</field>
         <field name="view_mode">tree,form</field>
+        
     </record>
 </odoo>

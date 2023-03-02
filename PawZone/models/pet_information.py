@@ -36,7 +36,7 @@ class PetInformation(models.Model):
     vendor_price=fields.Float()
     sales_price=fields.Float()
     pet_age=fields.Integer(string="Age(days)", compute="_compute_pet_age",inverse="_inverse_pet_age",store=True)
-   
+    
 
     _sql_constraints=[
         ('pet_id_unique','unique(pet_id)','ID already exists'),
