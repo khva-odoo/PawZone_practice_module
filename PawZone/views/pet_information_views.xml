@@ -1,5 +1,20 @@
 <odoo>
 
+    <record id="seq_pet_order" model="ir.sequence">
+        <field name="name">Pet Id</field>
+        <field name="code">pet.information</field>
+        <field name="prefix">PID</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+     <record id="action_pet_information" model="ir.actions.act_window">
+        <field name="name">Pet Information</field>
+        <field name="res_model">pet.information</field>
+        <field name="view_mode">tree,form</field> 
+        <field name="domain">[('pet_breeds_id','=',active_id)]</field>   
+    </record>
+
     <record id="pet_information_form" model="ir.ui.view">
         <field name="name">pet.information.views.form</field>
         <field name="model">pet.information</field>
@@ -15,9 +30,9 @@
                     <widget name= "web_ribbon"  title="Canceled" bg_color="bg-warning" attrs="{'invisible':[('pet_status','!=','canceled')]}"/>       
                     <field name = "image" widget = "image" />
                     <group>
-                    <label for = "pet_id"/>
+                   <!--  <label for = "pet_id"/> -->
                     <h1>
-                        <field name="pet_id" placeholder="80995677"/>                        
+                        <field name="pet_id"/>                        
                     </h1>
                      </group>   
                     
@@ -25,6 +40,7 @@
                         <page string="Details">
                             <group >
                                 <group>
+                                    
                                     <field name="pet_category_id"/>
                                     <field name="pet_breeds_id"/>
                                     <field name="pet_birth_date"/>
@@ -102,7 +118,8 @@
     <record id="pet_information_action" model="ir.actions.act_window">
         <field name="name">Pet Information</field>
         <field name="res_model">pet.information</field>
-        <field name="view_mode">tree,form</field>
-        
+        <field name="view_mode">tree,form</field>        
     </record>
+
+   
 </odoo>

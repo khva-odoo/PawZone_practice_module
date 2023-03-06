@@ -1,7 +1,7 @@
 {
     'name': "PawZone",
     'version': '1.0',
-    'depends': ['base'],
+    'depends': ['base','sale_management'],
     'author': "Author Name",
     'category': 'Category',
     'license': 'LGPL-3',
@@ -13,7 +13,7 @@
     'data':[
         'security/ir.model.access.csv',
         'views/pet_category_views.xml',
-        
+        'views/product_views.xml',
         'views/pet_information_views.xml',
         'views/res_users_views.xml',
         'views/product_details_views.xml',

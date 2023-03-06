@@ -7,3 +7,4 @@ access_product_details,access_product_details,model_product_details,base.group_u
 access_product_categories,access_product_categories,model_product_categories,base.group_user,1,1,1,1
 access_pet_services,access_pet_services,model_pet_services,base.group_user,1,1,1,1
 access_vendor_details,access_vendor_details,model_vendor_details,base.group_user,1,1,1,1
+access_product_template,access_product_template,model_product_template,base.group_user,1,1,1,1

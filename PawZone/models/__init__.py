@@ -6,3 +6,4 @@ from . import product_details
 from . import product_categories
 from . import pet_services
 from . import vendor_details
+from . import product_template

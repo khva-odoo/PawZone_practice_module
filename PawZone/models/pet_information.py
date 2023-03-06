@@ -8,8 +8,7 @@ class PetInformation(models.Model):
     _description = "All information regarding pet"
     _rec_name="pet_id"
 
-    
-    pet_id = fields.Char(string = 'Pet Id',required=True,)
+    pet_id=fields.Char(string="Pet ID",readonly=True,required=True,default=lambda self:('New'))
     sequence = fields.Integer(default=1)
     pet_description = fields.Text()
     pet_gender = fields.Selection(
@@ -83,3 +82,15 @@ class PetInformation(models.Model):
             name="%s-%s-%s" % (record.pet_id,record.pet_category_id.name,record.pet_breeds_id.name)
             res=[(record.id,name)]
         return res
+    
+    @api.model
+    def create(self,vals):
+        vals['pet_id']=self.env['ir.sequence'].next_by_code('pet.information')
+        return super(PetInformation,self).create(vals)
+    
+    @api.ondelete(at_uninstall=False)
+    def _unlink_except_available_or_canceled(self):
+        for record in self:
+            if record.pet_status in ['sold']:
+                raise UserError("You can only delete available or canceled pets")
+    
